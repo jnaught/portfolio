@@ -1,9 +1,8 @@
 {
   "name": "create-react-portfolio",
   "version": "0.1.0",
-  "author": "Bruce",
+  "author": "Aaron",
   "license": "MIT",
-  "homepage": "http://brucedev.net",
   "dependencies": {
     "axios": "^0.17.1",
     "babel-polyfill": "^6.26.0",
@@ -20,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build"
+    "deploy": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
