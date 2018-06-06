@@ -11,7 +11,7 @@ const transport = require("nodemailer").createTransport(smtpConfig);
 module.exports.sendMail = ({ subject, text }) => {
   return transport
     .sendMail({
-      from: req.body.email,
+      from: process.env.GMAIL_ADDRESS,
       to: process.env.GMAIL_ADDRESS,
       subject,
       text

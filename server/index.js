@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, "..", "client", "build")));
+app.use(express.static(`${__dirname}/../build)`));
 
 const transporter = nodemailer.createTransport({
   service: "Gmail",
@@ -19,7 +19,6 @@ const transporter = nodemailer.createTransport({
     ...config
   }
 });
-app.use(express.static(`${__dirname}/../build)`));
 app.post("/contact", (req, res) => {
   const { email, name, subject, message } = req.body;
 
